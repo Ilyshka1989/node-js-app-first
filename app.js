@@ -3,9 +3,9 @@ http.createServer(function(request,response)
 {response.end("Hello World");
 }).listen(3000, "127.0.0.1", function(){
     console.log("Должно работать");
+    console.log("greeting module");
 });
-
-const greeting = require("./greeting");
+const greeting = require ("./greeting");
 let currentDate = new Date();
 module.exports.currentDate = currentDate;
 module.exports.getMessage = function(name){
@@ -18,6 +18,7 @@ else
 return "Доброе утро," + name;
 }
 const os = require("os");
+const greeting = require("./greeting");
 let userName = os.userInfo().username;
 
 console.log('Дата запроса: ${greeting.date}');
