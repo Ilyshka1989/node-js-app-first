@@ -1,6 +1,6 @@
 console.log("greeting module")
 let currentDate = new Date();
-module.exports.currentDate = currentDate;
+module.exports.date = currentDate;
 module.exports.getMessage = function(name){
     let hour = currentDate.getHours();
     if(hour > 16)
