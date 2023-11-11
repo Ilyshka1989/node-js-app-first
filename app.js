@@ -15,3 +15,6 @@ console.log(greeting.getMessage(userName));
 const User = require("./user");
 let ilya = new User("Ilyshka", 34);
 ilya.sayHi();
+const welcome = require("./welcome");
+welcome.getEveningMessage();
+welcome.getMorningMessage();
