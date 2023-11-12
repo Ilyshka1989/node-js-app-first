@@ -6,7 +6,7 @@ module.exports.getMessage = function(){
     if(hour > 16)
     return "Добрый вечер," + global.name;
     else if(hour > 10)
-    return "Доброе день," + name;
+    return "Добрый день," + name;
 else 
 return "Доброе утро," + name;
 }
