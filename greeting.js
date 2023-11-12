@@ -1,10 +1,10 @@
-console.log("greeting module")
+
 let currentDate = new Date();
-module.exports.date = currentDate;
-module.exports.getMessage = function(name){
+global.date = currentDate;
+module.exports.getMessage = function(){
     let hour = currentDate.getHours();
     if(hour > 16)
-    return "Добрый вечер," + name;
+    return "Добрый вечер," + global.name;
     else if(hour > 10)
     return "Доброе день," + name;
 else 
