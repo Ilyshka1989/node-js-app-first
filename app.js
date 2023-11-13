@@ -1,9 +1,10 @@
 const http = require("http");
+let messange = "working"
 http.createServer(function(request,response)
-{response.end("Hello World");
-}).listen(3000, "127.0.0.1", function(){
-    console.log("Должно работать");
-
+{   console.log(messange);
+    response.end(messange)
+}).listen(3000, "127.0.0.1", ()=>{
+  console.log( "работать") ; 
 });
 
 const os = require("os");
@@ -16,6 +17,7 @@ const User = require("./user");
 let ilya = new User("Ilyshka", 34);
 ilya.sayHi();
 const welcome = require("./welcome");
+const { response } = require("express");
 welcome.getEveningMessage();
 welcome.getMorningMessage();
 global.name = "Ilyshka";
