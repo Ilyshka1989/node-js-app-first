@@ -1,5 +1,5 @@
 
-let currentDate = new Date();
+/*let currentDate = new Date();
 global.date = currentDate;
 module.exports.getMessage = function(){
     let hour = currentDate.getHours();
@@ -9,4 +9,4 @@ module.exports.getMessage = function(){
     return "Добрый день," + name;
 else 
 return "Доброе утро," + name;
-}
+}*/

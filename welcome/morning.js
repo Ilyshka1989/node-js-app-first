@@ -1,1 +1,1 @@
-module.exports = "Доброе утро";
+//module.exports = "Доброе утро";

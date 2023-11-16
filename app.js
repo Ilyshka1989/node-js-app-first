@@ -1,5 +1,5 @@
-const http = require("http");
-let messange = "working"
+/*const http = require("http");
+let messange = "Привет Андрей"
 http.createServer(function(request,response)
 {   console.log(messange);
     response.end(messange)
@@ -32,4 +32,18 @@ console.log("nodePath:" + nodePath);
 console.log("appPath:" + appPath);
 console.log();
 console.log("name:" + name);
-console.log("age:" + age);
+console.log("age:" + age);*/
+function display(data, callback){
+  var ran = Math.random() * (10-1)+1;
+  var err = ran>20? new Error ("Ошибка выполнения ran>5"): null;
+  setTimeout(function(){
+    callback(err, data);
+  }, 0);
+}
+console.log("Начало работы");
+display("Обработка данных....", function( err, data){
+  if(err) throw err;
+  console.log(data);
+}
+);
+console.log("Завершения работы");

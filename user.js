@@ -1,4 +1,4 @@
-function User(name, age){
+/*function User(name, age){
     this.name = name;
     this.age = age;
     this.displayInfo = function(){
@@ -8,4 +8,4 @@ function User(name, age){
 User.prototype.sayHi = function(){
     console.log(`Привет, меня зовут ${this.name}, мне ${this.age} года `);
 };
-module.exports = User;
+module.exports = User;*/
