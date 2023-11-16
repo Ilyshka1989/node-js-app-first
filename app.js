@@ -46,4 +46,5 @@ display("Обработка данных....", function( err, data){
   console.log(data);
 }
 );
-console.log("Завершения работы");
+setTimeout(function(){
+console.log("Завершения работы");}, 2000);
