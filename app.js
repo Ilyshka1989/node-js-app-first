@@ -33,7 +33,7 @@ console.log("appPath:" + appPath);
 console.log();
 console.log("name:" + name);
 console.log("age:" + age);*/
-function display(data, callback){
+/*function display(data, callback){
   var ran = Math.random() * (10-1)+1;
   var err = ran>20? new Error ("Ошибка выполнения ran>5"): null;
   setTimeout(function(){
@@ -47,4 +47,29 @@ display("Обработка данных....", function( err, data){
 }
 );
 setTimeout(function(){
-console.log("Завершения работы");}, 2000);
+console.log("Завершения работы");}, 2000);*/
+const Emitter = require("events");
+let emitter = new Emitter();
+let eventsName = "greet";
+emitter.on(eventsName, function(){
+  console.log("Hello all");
+});
+emitter.on(eventsName, function(){
+  console.log("ПРИВЕТ");
+});
+emitter.emit(eventsName);
+
+const EventEmitter = require("events");
+
+  let eventName = "top";
+  class User extends EventEmitter{
+    sayHi(data){
+      this.emit(eventName, data);
+    }
+  }
+  let user = new User();
+  user.on(eventName, function(data){
+    console.log(data);
+  });
+  user.sayHi("Вроде получается");
+
